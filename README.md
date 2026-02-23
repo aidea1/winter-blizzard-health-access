@@ -4,6 +4,8 @@
 
 > *Quantifying the invisible barriers of climate and geography in frontier medicine — North Dakota's Great Plains.*
 
+live Map Access at: https://aidea1.github.io/winter-blizzard-health-access/
+
 ---
 
 ## 📋 Table of Contents
