@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7e7fc06f424d527f1f26dcbf322246a6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7e7fc06f424d527f1f26dcbf322246a6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7e7fc06f424d527f1f26dcbf322246a6 = L.map(
+                "map_7e7fc06f424d527f1f26dcbf322246a6",
+                {
+                    center: [47.5, -100.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_479ebb014f3b322aff022e8c2eae15f0 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_479ebb014f3b322aff022e8c2eae15f0.addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+        function geo_json_35c30beb656dc90e5378d1bc38325d89_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "gray", "fillColor": "transparent", "weight": 1};
+            }
+        }
+
+        function geo_json_35c30beb656dc90e5378d1bc38325d89_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_35c30beb656dc90e5378d1bc38325d89 = L.geoJson(null, {
+                onEachFeature: geo_json_35c30beb656dc90e5378d1bc38325d89_onEachFeature,
+            
+                style: geo_json_35c30beb656dc90e5378d1bc38325d89_styler,
+            ...{
+}
+        });
+
+        function geo_json_35c30beb656dc90e5378d1bc38325d89_add (data) {
+            geo_json_35c30beb656dc90e5378d1bc38325d89
+                .addData(data);
+        }
+            geo_json_35c30beb656dc90e5378d1bc38325d89_add({"features": [{"geometry": {"coordinates": [[[-97.228743, 49.000239], [-97.097296, 48.682577], [-97.16302, 48.545653], [-97.130158, 48.140359], [-97.053481, 47.948667], [-96.856311, 47.609096], [-96.823449, 46.968294], [-96.785111, 46.924479], [-96.801542, 46.656109], [-96.719387, 46.437031], [-96.598895, 46.332969], [-96.560556, 45.933153], [-104.047534, 45.944106], [-104.042057, 47.861036], [-104.047534, 49.000239], [-97.228743, 49.000239]]], "type": "Polygon"}, "id": "USA-ND", "properties": {"fips": "38", "name": "North Dakota"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_35c30beb656dc90e5378d1bc38325d89.addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            var circle_marker_907a596e6778c8ef57a53ac808db48f2 = L.circleMarker(
+                [46.88, -96.78],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_907a596e6778c8ef57a53ac808db48f2.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:blue;">Sanford Medical Center Fargo</h4>
+                <b>Type:</b> Regional_Hub<br>
+                <b>Distance to Hub:</b> 0.0 mi<br>
+                <b>Annual Paralysis:</b> 0.0 days/yr<br>
+                <b>SVI:</b> 0.29<br>
+                <hr>
+                <b>Est. Payback Period:</b> 99 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ded5853d4aa22fed25aa5145d84c8baa = L.circleMarker(
+                [47.91, -97.07],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_ded5853d4aa22fed25aa5145d84c8baa.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:blue;">Altru Health System Grand Forks</h4>
+                <b>Type:</b> Regional_Hub<br>
+                <b>Distance to Hub:</b> 0.0 mi<br>
+                <b>Annual Paralysis:</b> 0.0 days/yr<br>
+                <b>SVI:</b> 0.39<br>
+                <hr>
+                <b>Est. Payback Period:</b> 99 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_786f804dedefb7a1f38a35396c5e1b2f = L.circleMarker(
+                [46.81, -100.78],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_786f804dedefb7a1f38a35396c5e1b2f.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:blue;">CHI St. Alexius Bismarck</h4>
+                <b>Type:</b> Regional_Hub<br>
+                <b>Distance to Hub:</b> 0.0 mi<br>
+                <b>Annual Paralysis:</b> 0.0 days/yr<br>
+                <b>SVI:</b> 0.35<br>
+                <hr>
+                <b>Est. Payback Period:</b> 99 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05b4fe022407d0b48290e24f7857ac74 = L.circleMarker(
+                [48.23, -101.29],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_05b4fe022407d0b48290e24f7857ac74.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:blue;">Trinity Health Minot</h4>
+                <b>Type:</b> Regional_Hub<br>
+                <b>Distance to Hub:</b> 0.0 mi<br>
+                <b>Annual Paralysis:</b> 0.0 days/yr<br>
+                <b>SVI:</b> 0.38<br>
+                <hr>
+                <b>Est. Payback Period:</b> 99 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_26635358b9163b26c2af40c93c1e8f57 = L.circleMarker(
+                [46.09, -100.63],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_26635358b9163b26c2af40c93c1e8f57.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Fort Yates Hospital (IHS)</h4>
+                <b>Type:</b> IHS_Clinic<br>
+                <b>Distance to Hub:</b> 50.2 mi<br>
+                <b>Annual Paralysis:</b> 12.4 days/yr<br>
+                <b>SVI:</b> 0.95<br>
+                <hr>
+                <b>Est. Payback Period:</b> 7.27 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_55617ccd518c609f31790ebe4fc6d4d4 = L.circleMarker(
+                [48.84, -99.75],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_55617ccd518c609f31790ebe4fc6d4d4.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:darkred;">Belcourt (Quentin N. Burdick IHS)</h4>
+                <b>Type:</b> Tribal_Hospital<br>
+                <b>Distance to Hub:</b> 82.3 mi<br>
+                <b>Annual Paralysis:</b> 25.6 days/yr<br>
+                <b>SVI:</b> 0.88<br>
+                <hr>
+                <b>Est. Payback Period:</b> 3.52 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aed7afac8d83674ac1d7436fc452a718 = L.circleMarker(
+                [47.98, -102.49],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_aed7afac8d83674ac1d7436fc452a718.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">New Town (Elbowoods Memorial)</h4>
+                <b>Type:</b> Tribal_Health<br>
+                <b>Distance to Hub:</b> 58.2 mi<br>
+                <b>Annual Paralysis:</b> 15.4 days/yr<br>
+                <b>SVI:</b> 0.75<br>
+                <hr>
+                <b>Est. Payback Period:</b> 5.85 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_84675b229f5b0fd1701fd4ba354de02f = L.circleMarker(
+                [47.9, -98.99],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_84675b229f5b0fd1701fd4ba354de02f.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Fort Totten (Spirit Lake Health)</h4>
+                <b>Type:</b> IHS_Clinic<br>
+                <b>Distance to Hub:</b> 69.6 mi<br>
+                <b>Annual Paralysis:</b> 16.4 days/yr<br>
+                <b>SVI:</b> 0.85<br>
+                <hr>
+                <b>Est. Payback Period:</b> 5.49 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5e270a98354d5b5955b371b6f6fbfad2 = L.circleMarker(
+                [46.39, -100.59],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_5e270a98354d5b5955b371b6f6fbfad2.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Cannon Ball Health Station</h4>
+                <b>Type:</b> Tribal_Health<br>
+                <b>Distance to Hub:</b> 30.4 mi<br>
+                <b>Annual Paralysis:</b> 9.2 days/yr<br>
+                <b>SVI:</b> 0.92<br>
+                <hr>
+                <b>Est. Payback Period:</b> 9.79 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a354f340c067bfaceee6457b6b93c13a = L.circleMarker(
+                [48.06, -103.85],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_a354f340c067bfaceee6457b6b93c13a.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Trenton Indian Service Area</h4>
+                <b>Type:</b> Tribal_Health<br>
+                <b>Distance to Hub:</b> 118.9 mi<br>
+                <b>Annual Paralysis:</b> 18.4 days/yr<br>
+                <b>SVI:</b> 0.65<br>
+                <hr>
+                <b>Est. Payback Period:</b> 4.9 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b9815fae86d221330ba09eae67c4a894 = L.circleMarker(
+                [47.8, -103.28],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_b9815fae86d221330ba09eae67c4a894.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Watford City - McKenzie Health</h4>
+                <b>Type:</b> Critical_Access<br>
+                <b>Distance to Hub:</b> 96.9 mi<br>
+                <b>Annual Paralysis:</b> 19.6 days/yr<br>
+                <b>SVI:</b> 0.49<br>
+                <hr>
+                <b>Est. Payback Period:</b> 4.6 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e12a6101dde4282c27f536ad73ee7cc7 = L.circleMarker(
+                [46.18, -103.41],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_e12a6101dde4282c27f536ad73ee7cc7.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Bowman - Southwest Healthcare</h4>
+                <b>Type:</b> Critical_Access<br>
+                <b>Distance to Hub:</b> 132.8 mi<br>
+                <b>Annual Paralysis:</b> 22.0 days/yr<br>
+                <b>SVI:</b> 0.32<br>
+                <hr>
+                <b>Est. Payback Period:</b> 4.1 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_89c4a3aabc7fdc179fe99c5fc62f2e6e = L.circleMarker(
+                [48.4, -102.94],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_89c4a3aabc7fdc179fe99c5fc62f2e6e.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Tioga Medical Center</h4>
+                <b>Type:</b> Critical_Access<br>
+                <b>Distance to Hub:</b> 76.9 mi<br>
+                <b>Annual Paralysis:</b> 15.0 days/yr<br>
+                <b>SVI:</b> 0.38<br>
+                <hr>
+                <b>Est. Payback Period:</b> 6.01 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_68c1e6f6d55c342fb2d36f7c045f8557 = L.circleMarker(
+                [48.79, -97.62],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_68c1e6f6d55c342fb2d36f7c045f8557.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Cavalier - Pembina County Memorial</h4>
+                <b>Type:</b> Critical_Access<br>
+                <b>Distance to Hub:</b> 65.9 mi<br>
+                <b>Annual Paralysis:</b> 11.4 days/yr<br>
+                <b>SVI:</b> 0.45<br>
+                <hr>
+                <b>Est. Payback Period:</b> 7.9 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a0576e8515a3ca4c39c7437830a7b70c = L.circleMarker(
+                [46.15, -98.09],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_a0576e8515a3ca4c39c7437830a7b70c.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Oakes Community Hospital</h4>
+                <b>Type:</b> Critical_Access<br>
+                <b>Distance to Hub:</b> 60.2 mi<br>
+                <b>Annual Paralysis:</b> 9.2 days/yr<br>
+                <b>SVI:</b> 0.48<br>
+                <hr>
+                <b>Est. Payback Period:</b> 9.79 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c1704a805d71c5066f0aaed590c76687 = L.circleMarker(
+                [46.88, -102.79],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_c1704a805d71c5066f0aaed590c76687.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Dickinson - CHI St. Alexius</h4>
+                <b>Type:</b> Critical_Access<br>
+                <b>Distance to Hub:</b> 95.4 mi<br>
+                <b>Annual Paralysis:</b> 20.4 days/yr<br>
+                <b>SVI:</b> 0.33<br>
+                <hr>
+                <b>Est. Payback Period:</b> 4.42 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fc669d8aa59f6046aabd2b1f73d8c1f2 = L.circleMarker(
+                [48.91, -103.3],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_fc669d8aa59f6046aabd2b1f73d8c1f2.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Crosby - St. Luke’s Medical</h4>
+                <b>Type:</b> Critical_Access<br>
+                <b>Distance to Hub:</b> 103.5 mi<br>
+                <b>Annual Paralysis:</b> 22.4 days/yr<br>
+                <b>SVI:</b> 0.35<br>
+                <hr>
+                <b>Est. Payback Period:</b> 4.02 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8ad3eeb6957dd668fbeef18694e59e2d = L.circleMarker(
+                [48.83, -100.45],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_8ad3eeb6957dd668fbeef18694e59e2d.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Bottineau - St. Andrew's Health</h4>
+                <b>Type:</b> Critical_Access<br>
+                <b>Distance to Hub:</b> 56.6 mi<br>
+                <b>Annual Paralysis:</b> 10.8 days/yr<br>
+                <b>SVI:</b> 0.45<br>
+                <hr>
+                <b>Est. Payback Period:</b> 8.34 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6751effc3d5daa0c94e0bf90abbc7d01 = L.circleMarker(
+                [48.42, -97.41],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_6751effc3d5daa0c94e0bf90abbc7d01.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Grafton - Unity Medical Center</h4>
+                <b>Type:</b> Critical_Access<br>
+                <b>Distance to Hub:</b> 38.6 mi<br>
+                <b>Annual Paralysis:</b> 4.8 days/yr<br>
+                <b>SVI:</b> 0.5<br>
+                <hr>
+                <b>Est. Payback Period:</b> 18.77 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_33c932becef3b7765c880992d0690390 = L.circleMarker(
+                [46.91, -98.71],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_33c932becef3b7765c880992d0690390.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:blue;">Jamestown Regional Medical</h4>
+                <b>Type:</b> Regional_Hub<br>
+                <b>Distance to Hub:</b> 0.0 mi<br>
+                <b>Annual Paralysis:</b> 0.0 days/yr<br>
+                <b>SVI:</b> 0.41<br>
+                <hr>
+                <b>Est. Payback Period:</b> 99 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1cae02d1e993c30c6256304161fc0b83 = L.circleMarker(
+                [47.77, -99.94],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_1cae02d1e993c30c6256304161fc0b83.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Harvey - St. Aloisius Medical</h4>
+                <b>Type:</b> Critical_Access<br>
+                <b>Distance to Hub:</b> 70.2 mi<br>
+                <b>Annual Paralysis:</b> 11.0 days/yr<br>
+                <b>SVI:</b> 0.46<br>
+                <hr>
+                <b>Est. Payback Period:</b> 8.19 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_936c9d7fc4cb52eb2fb8b3f51a29d363 = L.circleMarker(
+                [46.27, -100.23],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_936c9d7fc4cb52eb2fb8b3f51a29d363.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Linton Regional Medical Center</h4>
+                <b>Type:</b> Critical_Access<br>
+                <b>Distance to Hub:</b> 45.6 mi<br>
+                <b>Annual Paralysis:</b> 5.6 days/yr<br>
+                <b>SVI:</b> 0.42<br>
+                <hr>
+                <b>Est. Payback Period:</b> 16.09 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7e85d913f52a4288295451130830ed61 = L.circleMarker(
+                [48.36, -100.0],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_7e85d913f52a4288295451130830ed61.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Rugby - Heart of America</h4>
+                <b>Type:</b> Critical_Access<br>
+                <b>Distance to Hub:</b> 60.1 mi<br>
+                <b>Annual Paralysis:</b> 11.4 days/yr<br>
+                <b>SVI:</b> 0.49<br>
+                <hr>
+                <b>Est. Payback Period:</b> 7.9 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_76f36f68d385137a325394d21aff1533 = L.circleMarker(
+                [48.81, -100.06],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_76f36f68d385137a325394d21aff1533.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Dunseith Kiosk Potential</h4>
+                <b>Type:</b> Kiosk_Potential<br>
+                <b>Distance to Hub:</b> 69.2 mi<br>
+                <b>Annual Paralysis:</b> 18.0 days/yr<br>
+                <b>SVI:</b> 0.82<br>
+                <hr>
+                <b>Est. Payback Period:</b> 5.01 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_64fbf6dc9c36ec175c6f5fbd8da27e7a = L.circleMarker(
+                [46.04, -100.92],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_7e7fc06f424d527f1f26dcbf322246a6);
+        
+    
+            circle_marker_64fbf6dc9c36ec175c6f5fbd8da27e7a.bindTooltip(
+                `<div>
+                     
+            <div style="font-family: Arial; width: 220px;">
+                <h4 style="color:orange;">Selfridge Kiosk Potential</h4>
+                <b>Type:</b> Kiosk_Potential<br>
+                <b>Distance to Hub:</b> 53.6 mi<br>
+                <b>Annual Paralysis:</b> 14.4 days/yr<br>
+                <b>SVI:</b> 0.9<br>
+                <hr>
+                <b>Est. Payback Period:</b> 6.26 Years
+            </div>
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
